@@ -1,0 +1,2 @@
+# spotrix
+Spotrix for everyone
