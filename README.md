@@ -1,6 +1,6 @@
-<center align="center">
-  <img src="./spotrix-frontend/images/spotrix-logo.svg" alt="logo" width="80" />
-</center>
+<div align="center">
+  <img src="./spotrix-frontend/images/spotrix-logo.svg" alt="logo" width="200" />
+</div>
 
 # Spotrix
 
