@@ -1,4 +1,4 @@
-<center>
+<center align="center">
   <img src="./spotrix-frontend/images/spotrix-logo.svg" alt="logo" width="80" />
 </center>
 
@@ -35,7 +35,7 @@ Spotrix provides:
 
 ## Supported Databases
 
-Superset can query data from any SQL-speaking datastore or data engine (e.g. Presto or Athena) that has a Python DB-API driver and a SQLAlchemy dialect.
+Spotrix can query data from any SQL-speaking datastore or data engine (e.g. Presto or Athena) that has a Python DB-API driver and a SQLAlchemy dialect.
 
 Here are some of the major database solutions that are supported:
 
