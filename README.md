@@ -1,8 +1,13 @@
 <div align="center">
-  <img src="./spotrix-frontend/images/spotrix-logo.svg" alt="logo" width="200" />
+  <img src="./spotrix-frontend/images/spotrix-logo.svg" alt="logo" width="300" />
 </div>
 
 # Spotrix
+
+![](https://img.shields.io/github/repo-size/Spotrix/spotrix)
+![](https://img.shields.io/github/license/Spotrix/spotrix)
+![](https://img.shields.io/github/v/tag/Spotrix/spotrix)
+![](https://img.shields.io/github/followers/Spotrix?style=social)
 
 A modern, enterprise-ready business intelligence web application.
 
