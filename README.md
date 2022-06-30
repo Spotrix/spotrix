@@ -9,6 +9,10 @@
 ![](https://img.shields.io/github/v/tag/Spotrix/spotrix)
 ![](https://img.shields.io/github/followers/Spotrix?style=social)
 
+[Spotrix Introduction](https://ciusji.gitbook.io/spotrix/) | 
+[Spotrix on GuinsooLab](https://guinsoolab.github.io/glab/) | 
+[FAQ](https://ciusji.gitbook.io/spotrix/appendix/faq)
+
 A modern, enterprise-ready business intelligence web application.
 
 ## Feature
