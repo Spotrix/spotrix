@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="./spotrix-frontend/images/spotrix-logo.svg" alt="logo" width="300" />
+  <img src="./spotrix-frontend/images/spotrix-logo.svg" width="120" alt="logo" />
+  <br/>
+  <small>a modern, enterprise-ready business intelligence web application</small>
 </div>
 
 # Spotrix
