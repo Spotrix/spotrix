@@ -1,3 +1,7 @@
+<div align="right">
+    <img src="spotrix-frontend/images/guinsoolab-badge.png" width="60" alt="badge">
+    <br />
+</div>
 <div align="center">
   <img src="spotrix-frontend/images/spotrix.svg" width="120" alt="logo" />
   <br/>
