@@ -15,8 +15,11 @@
 ![](https://img.shields.io/github/v/tag/Spotrix/spotrix)
 ![](https://img.shields.io/github/followers/Spotrix?style=social)
 
-[Spotrix Introduction](https://ciusji.gitbook.io/spotrix/) | 
-[Spotrix on GuinsooLab](https://guinsoolab.github.io/glab/) | 
+[Introduction](https://ciusji.gitbook.io/spotrix/) | 
+[Installation](https://ciusji.gitbook.io/spotrix/installing/installing-from-source) | 
+[Configuration](https://ciusji.gitbook.io/spotrix/congiguration/basic-configuration) | 
+[Creating Charts](https://ciusji.gitbook.io/spotrix/creating-charts/creating-your-charts) | 
+[APIs](https://ciusji.gitbook.io/spotrix/appendix/api) | 
 [FAQ](https://ciusji.gitbook.io/spotrix/appendix/faq)
 
 A modern, enterprise-ready business intelligence web application.
@@ -78,6 +81,7 @@ Here are some of the major database solutions that are supported:
   <img src="./spotrix-frontend/images/apache-kylin.png" alt="apache-kylin" border="0" width="56" height="64" />
   <img src="./spotrix-frontend/images/hologres.png" alt="hologres" border="0" width="71" height="64" />
   <img src="./spotrix-frontend/images/netezza.png" alt="netezza" border="0" width="64" height="64" />
+  <img src="./spotrix-frontend/images/guinsoolab-stack.jpg" alt="guinsoolab-stack" border="0" width="64" height="64" />
 </div>
 
 **A more comprehensive list of supported databases** along with the configuration instructions can be found
