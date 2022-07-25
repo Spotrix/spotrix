@@ -13,7 +13,6 @@
 ![](https://img.shields.io/github/repo-size/Spotrix/spotrix)
 ![](https://img.shields.io/github/license/Spotrix/spotrix)
 ![](https://img.shields.io/github/v/tag/Spotrix/spotrix)
-![](https://img.shields.io/github/followers/Spotrix?style=social)
 
 [Introduction](https://ciusji.gitbook.io/spotrix/) | 
 [Installation](https://ciusji.gitbook.io/spotrix/installing/installing-from-source) | 
@@ -30,6 +29,20 @@ A modern, enterprise-ready business intelligence web application.
 - **Integrates with modern databases**: Spotrix can connect to any SQL based datasource through SQLAlchemy, including modern cloud native databases and engines at petabyte scale.
 - **Modern architecture**: Spotrix is lightweight and highly scalable, leveraging the power of your existing data infrastructure without requiring yet another ingestion layer.
 - **Rich visualizations and dashboards**: Spotrix ships with a wide array of beautiful visualizations. Our visualization plug-in architecture makes it easy to build custom visualizations that drop directly into Spotrix.
+
+## Snapshots & Gits
+
+### Explore Table Data
+
+![](./spotrix-frontend/images/overview-1.png)
+
+### Explore Map data
+
+![](./spotrix-frontend/images/overview-2.png)
+
+### Charts List
+
+![](./spotrix-frontend/images/overview-3.png)
 
 ## Why Spotrix?
 
