@@ -83,6 +83,9 @@ export interface MenuObjectProps extends MenuObjectChildProps {
 const StyledHeader = styled.header`
   background-color: white;
   margin-bottom: 2px;
+  margin-left: 60px;
+  margin-top: 47px;
+  border-top: 1px solid #dbdcdd;
   &:nth-last-of-type(2) nav {
     margin-bottom: 2px;
   }
@@ -262,9 +265,9 @@ export function Menu({
             title={brand.tooltip}
             arrowPointAtCenter
           >
-            <a className="navbar-brand" href={brand.path}>
-              <img width={brand.width} src={brand.icon} alt={brand.alt} />
-            </a>
+            {/* <a className="navbar-brand" href={brand.path}> */}
+            {/*  <img width={brand.width} src={brand.icon} alt={brand.alt} /> */}
+            {/* </a> */}
           </Tooltip>
           {brand.text && (
             <div className="navbar-brand-text">
@@ -305,6 +308,54 @@ export function Menu({
           />
         </Col>
       </Row>
+      <div className="appLeftBarNavs">
+        <a
+          href={brand.path}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '60px',
+            justifyContent: 'center',
+            lineHeight: '47px',
+            textAlign: 'center',
+          }}
+        >
+          <img width={brand.width} src={brand.icon} alt={brand.alt} />
+        </a>
+        <ul>
+          <li>
+            <Icons.NavHome
+              onClick={() => window.open('/spotrix/welcome/', '_self')}
+            />
+          </li>
+          <li>
+            <Icons.NavDashboard
+              onClick={() => window.open('/dashboard/list/', '_self')}
+            />
+          </li>
+          <li>
+            <Icons.NavCharts
+              onClick={() => window.open('/chart/list/', '_self')}
+            />
+          </li>
+          <li>
+            <Icons.NavLab
+              onClick={() => window.open('/spotrix/sqllab/', '_self')}
+            />
+          </li>
+          <li>
+            <Icons.NavExplore
+              onClick={() => window.open('/spotrix/explore/', '_self')}
+            />
+          </li>
+          <li>
+            <Icons.NavData
+              onClick={() => window.open('/databaseview/list/', '_self')}
+            />
+          </li>
+        </ul>
+      </div>
     </StyledHeader>
   );
 }

@@ -105,7 +105,7 @@ export default function ColumnElement({ column }: ColumnElementProps) {
     ));
   }
   return (
-    <div className="clearfix table-column">
+    <div className="clearfix table-column" style={{ fontSize: '12px' }}>
       <div className="pull-left m-l-10 col-name">
         {columnName}
         {icons}

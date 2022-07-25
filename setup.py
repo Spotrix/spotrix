@@ -161,10 +161,12 @@ setup(
     python_requires="~=3.7",
     author="ciusji",
     author_email="bqjimaster@gmail.com",
-    url="https://spotrix.github.io/spotrix-web/#/app/home",
-    download_url="https://spotrix.github.io/spotrix-web/#/app/home",
+    url="https://github.com/Spotrix/spotrix",
+    download_url="https://github.com/Spotrix/spotrix",
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
 )

@@ -80,13 +80,15 @@ const Styles = styled.div`
   background: ${({ theme }) => theme.colors.grayscale.light5};
   text-align: left;
   position: relative;
-  width: 100%;
+  // width: 100%;
+  width: calc(100vw - 60px);
   max-height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   flex-basis: 100vh;
   align-items: stretch;
+  margin-left: 60px;
   border-top: 1px solid ${({ theme }) => theme.colors.grayscale.light2};
   .explore-column {
     display: flex;

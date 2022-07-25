@@ -43,9 +43,6 @@ import { FeatureFlag, isFeatureEnabled } from 'src/featureFlags';
 import { Switch } from 'src/common/components';
 
 import ActivityTable from './ActivityTable';
-import ChartTable from './ChartTable';
-import SavedQueries from './SavedQueries';
-import DashboardTable from './DashboardTable';
 
 interface WelcomeProps {
   user: User;
@@ -260,8 +257,6 @@ function Welcome({ user, addDangerToast }: WelcomeProps) {
     }
   }, [activityData]);
 
-  const isRecentActivityLoading =
-    !activityData?.Examples && !activityData?.Viewed;
   return (
     <WelcomeContainer>
       <WelcomeNav>
@@ -289,42 +284,6 @@ function Welcome({ user, addDangerToast }: WelcomeProps) {
             />
           ) : (
             <LoadingCards />
-          )}
-        </Collapse.Panel>
-        <Collapse.Panel header={t('Dashboards')} key="2">
-          {!dashboardData || isRecentActivityLoading ? (
-            <LoadingCards cover={checked} />
-          ) : (
-            <DashboardTable
-              user={user}
-              mine={dashboardData}
-              showThumbnails={checked}
-              examples={activityData?.Examples}
-            />
-          )}
-        </Collapse.Panel>
-        <Collapse.Panel header={t('Charts')} key="3">
-          {!chartData || isRecentActivityLoading ? (
-            <LoadingCards cover={checked} />
-          ) : (
-            <ChartTable
-              showThumbnails={checked}
-              user={user}
-              mine={chartData}
-              examples={activityData?.Examples}
-            />
-          )}
-        </Collapse.Panel>
-        <Collapse.Panel header={t('Saved queries')} key="4">
-          {!queryData ? (
-            <LoadingCards cover={checked} />
-          ) : (
-            <SavedQueries
-              showThumbnails={checked}
-              user={user}
-              mine={queryData}
-              featureFlag={isFeatureEnabled(FeatureFlag.THUMBNAILS)}
-            />
           )}
         </Collapse.Panel>
       </Collapse>
