@@ -114,7 +114,7 @@ export const MenuItem = styled(AntdMenu.Item)`
 `;
 
 export const StyledNav = styled(AntdMenu)`
-  line-height: 51px;
+  line-height: 47px;
   border: none;
 
   & > .ant-menu-item,

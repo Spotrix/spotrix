@@ -75,7 +75,16 @@ const App = () => (
           <Route path={path} key={path}>
             <Suspense fallback={<Fallback />}>
               <ErrorBoundary>
-                <Component user={user} {...props} />
+                {/* added by ciusji noqa */}
+                <div
+                  style={{
+                    marginLeft: 60,
+                    height: `calc(100vh - 47px - 53px)`,
+                    overflowY: 'scroll',
+                  }}
+                >
+                  <Component user={user} {...props} />
+                </div>
               </ErrorBoundary>
             </Suspense>
           </Route>
