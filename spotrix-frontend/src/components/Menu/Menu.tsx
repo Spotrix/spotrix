@@ -354,6 +354,21 @@ export function Menu({
               onClick={() => window.open('/databaseview/list/', '_self')}
             />
           </li>
+          <li
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '60px',
+              justifyContent: 'center',
+            }}
+          >
+            <Icons.Map
+              onClick={() =>
+                window.open('https://ciusji.gitbook.io/spotrix/', '_blank')
+              }
+            />
+          </li>
         </ul>
       </div>
     </StyledHeader>
