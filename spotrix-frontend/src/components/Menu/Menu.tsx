@@ -325,22 +325,34 @@ export function Menu({
         </a>
         <ul>
           <li>
-            <Icons.NavHome />
+            <Icons.NavHome
+              onClick={() => window.open('/spotrix/welcome/', '_self')}
+            />
           </li>
           <li>
-            <Icons.NavDashboard />
+            <Icons.NavDashboard
+              onClick={() => window.open('/dashboard/list/', '_self')}
+            />
           </li>
           <li>
-            <Icons.NavCharts />
+            <Icons.NavCharts
+              onClick={() => window.open('/chart/list/', '_self')}
+            />
           </li>
           <li>
-            <Icons.NavLab />
+            <Icons.NavLab
+              onClick={() => window.open('/spotrix/sqllab/', '_self')}
+            />
           </li>
           <li>
-            <Icons.NavExplore />
+            <Icons.NavExplore
+              onClick={() => window.open('/spotrix/explore/', '_self')}
+            />
           </li>
           <li>
-            <Icons.NavData />
+            <Icons.NavData
+              onClick={() => window.open('/databaseview/list/', '_self')}
+            />
           </li>
         </ul>
       </div>
