@@ -218,7 +218,7 @@ APP_NAME = "Spotrix"
 
 # Specify the App icon
 APP_ICON = "/static/assets/images/spotrix.svg"
-APP_ICON_WIDTH = 45
+APP_ICON_WIDTH = 40
 # APP_ICON_HEIGHT = 45
 
 # Specify where clicking the logo would take the user
