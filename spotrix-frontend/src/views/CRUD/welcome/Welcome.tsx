@@ -63,10 +63,10 @@ interface LoadingProps {
 const DEFAULT_TAB_ARR = ['2', '3'];
 
 const WelcomeContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.grayscale.light4};
+  background-color: #ffffff;
   .ant-row.menu {
     margin-top: -15px;
-    background-color: ${({ theme }) => theme.colors.grayscale.light4};
+    background-color: ${({ theme }) => theme.colors.grayscale.light5};
     &:after {
       content: '';
       display: block;
