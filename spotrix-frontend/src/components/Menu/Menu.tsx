@@ -22,7 +22,6 @@ import { debounce } from 'lodash';
 import { Global } from '@emotion/react';
 import { getUrlParam } from 'src/utils/urlUtils';
 import { MainNav as DropdownMenu, MenuMode } from 'src/common/components';
-import { Tooltip } from 'src/components/Tooltip';
 import { Link } from 'react-router-dom';
 import { Row, Col, Grid } from 'antd';
 import Icons from 'src/components/Icons';
@@ -196,6 +195,7 @@ export function Menu({
   const standalone = getUrlParam(URL_PARAMS.standalone);
   if (standalone) return <></>;
 
+  // @ts-ignore
   const renderSubMenu = ({
     label,
     childs,
@@ -259,45 +259,45 @@ export function Menu({
       />
       <Row>
         <Col md={16} xs={24}>
-          <Tooltip
-            id="brand-tooltip"
-            placement="bottomLeft"
-            title={brand.tooltip}
-            arrowPointAtCenter
-          >
-            {/* <a className="navbar-brand" href={brand.path}> */}
-            {/*  <img width={brand.width} src={brand.icon} alt={brand.alt} /> */}
-            {/* </a> */}
-          </Tooltip>
-          {brand.text && (
-            <div className="navbar-brand-text">
-              <span>{brand.text}</span>
-            </div>
-          )}
-          <DropdownMenu
-            mode={showMenu}
-            data-test="navbar-top"
-            className="main-nav"
-          >
-            {menu.map(item => {
-              const props = {
-                ...item,
-                isFrontendRoute: isFrontendRoute(item.url),
-                childs: item.childs?.map(c => {
-                  if (typeof c === 'string') {
-                    return c;
-                  }
+          {/* <Tooltip */}
+          {/*  id="brand-tooltip" */}
+          {/*  placement="bottomLeft" */}
+          {/*  title={brand.tooltip} */}
+          {/*  arrowPointAtCenter */}
+          {/* > */}
+          {/*  /!* <a className="navbar-brand" href={brand.path}> *!/ */}
+          {/*  /!*  <img width={brand.width} src={brand.icon} alt={brand.alt} /> *!/ */}
+          {/*  /!* </a> *!/ */}
+          {/* </Tooltip> */}
+          {/* {brand.text && ( */}
+          {/*  <div className="navbar-brand-text"> */}
+          {/*    <span>{brand.text}</span> */}
+          {/*  </div> */}
+          {/* )} */}
+          {/* <DropdownMenu */}
+          {/*  mode={showMenu} */}
+          {/*  data-test="navbar-top" */}
+          {/*  className="main-nav" */}
+          {/* > */}
+          {/*  {menu.map(item => { */}
+          {/*    const props = { */}
+          {/*      ...item, */}
+          {/*      isFrontendRoute: isFrontendRoute(item.url), */}
+          {/*      childs: item.childs?.map(c => { */}
+          {/*        if (typeof c === 'string') { */}
+          {/*          return c; */}
+          {/*        } */}
 
-                  return {
-                    ...c,
-                    isFrontendRoute: isFrontendRoute(c.url),
-                  };
-                }),
-              };
+          {/*        return { */}
+          {/*          ...c, */}
+          {/*          isFrontendRoute: isFrontendRoute(c.url), */}
+          {/*        }; */}
+          {/*      }), */}
+          {/*    }; */}
 
-              return renderSubMenu(props);
-            })}
-          </DropdownMenu>
+          {/*    return renderSubMenu(props); */}
+          {/*  })} */}
+          {/* </DropdownMenu> */}
         </Col>
         <Col md={8} xs={24}>
           <RightMenu
@@ -352,6 +352,21 @@ export function Menu({
           <li>
             <Icons.NavData
               onClick={() => window.open('/databaseview/list/', '_self')}
+            />
+          </li>
+          <li
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '60px',
+              justifyContent: 'center',
+            }}
+          >
+            <Icons.Map
+              onClick={() =>
+                window.open('https://ciusji.gitbook.io/spotrix/', '_blank')
+              }
             />
           </li>
         </ul>
