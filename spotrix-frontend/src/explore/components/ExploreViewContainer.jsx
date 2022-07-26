@@ -191,7 +191,7 @@ function ExploreViewContainer(props) {
 
   const defaultSidebarsWidth = {
     controls_width: 320,
-    datasource_width: 300,
+    datasource_width: 270,
   };
 
   const addHistory = useCallback(
