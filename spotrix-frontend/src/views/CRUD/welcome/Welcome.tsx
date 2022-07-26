@@ -63,14 +63,14 @@ interface LoadingProps {
 const DEFAULT_TAB_ARR = ['2', '3'];
 
 const WelcomeContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.grayscale.light4};
+  background-color: #ffffff;
   .ant-row.menu {
     margin-top: -15px;
-    background-color: ${({ theme }) => theme.colors.grayscale.light4};
+    background-color: ${({ theme }) => theme.colors.grayscale.light5};
     &:after {
       content: '';
       display: block;
-      border: 1px solid ${({ theme }) => theme.colors.grayscale.light2};
+      border-top: 1px solid ${({ theme }) => theme.colors.grayscale.light2};
       margin: 0px ${({ theme }) => theme.gridUnit * 6}px;
       position: relative;
       width: 100%;
@@ -161,6 +161,7 @@ function Welcome({ user, addDangerToast }: WelcomeProps) {
   const collapseState = getFromLocalStorage(HOMEPAGE_COLLAPSE_STATE, null);
   const [activeState, setActiveState] = useState<Array<string>>(collapseState);
 
+  // @ts-ignore
   const handleCollapse = (state: Array<string>) => {
     setActiveState(state);
     setInLocalStorage(HOMEPAGE_COLLAPSE_STATE, state);
@@ -268,8 +269,8 @@ function Welcome({ user, addDangerToast }: WelcomeProps) {
           </div>
         ) : null}
       </WelcomeNav>
-      <Collapse activeKey={activeState} onChange={handleCollapse} ghost bigger>
-        <Collapse.Panel header={t('Recents')} key="1">
+      <Collapse activeKey={activeState} ghost bigger>
+        <Collapse.Panel header={t('Recent')} key="1">
           {activityData &&
           (activityData.Viewed ||
             activityData.Examples ||
