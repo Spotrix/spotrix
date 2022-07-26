@@ -26,7 +26,7 @@ spotrix:
 	# Install external dependencies
 	pip install -r requirements/local.txt
 
-	# Install Superset in editable (development) mode
+	# Install in editable (development) mode
 	pip install -e .
 
 	# Create an admin user in your metadata database
@@ -47,18 +47,18 @@ update-py:
 	# Install external dependencies
 	pip install -r requirements/local.txt
 
-	# Install Superset in editable (development) mode
+	# Install in editable (development) mode
 	pip install -e .
 
 	# Initialize the database
-	superset db upgrade
+	spotrix db upgrade
 
 	# Create default roles and permissions
-	superset init
+	spotrix init
 
 update-js:
 	# Install js packages
-	cd superset-frontend; npm install
+	cd spotrix-frontend; npm install
 
 venv:
 	# Create a virtual environment and activate it (recommended)
@@ -77,7 +77,7 @@ py-format: pre-commit
 	pre-commit run black --all-files
 
 py-lint: pre-commit
-	pylint -j 0 superset
+	pylint -j 0 spotrix
 
 js-format:
 	cd spotrix-frontend; npm run prettier
