@@ -1574,7 +1574,7 @@ def indexed(
 
 
 def is_test() -> bool:
-    return strtobool(os.environ.get("SUPERSET_TESTENV", "false"))
+    return strtobool(os.environ.get("SPOTRIX_TESTENV", "false"))
 
 
 def get_time_filter_status(  # pylint: disable=too-many-branches

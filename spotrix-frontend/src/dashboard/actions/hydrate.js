@@ -337,20 +337,16 @@ export const hydrateDashboard = (dashboardData, chartData) => (
         metadata,
         userId: user.userId ? String(user.userId) : null, // legacy, please use state.user instead
         dash_edit_perm: canEdit,
-        dash_save_perm: findPermission('can_save_dash', 'Superset', roles),
+        dash_save_perm: findPermission('can_save_dash', 'Spotrix', roles),
         dash_share_perm: findPermission(
           'can_share_dashboard',
-          'Superset',
+          'Spotrix',
           roles,
         ),
-        superset_can_explore: findPermission('can_explore', 'Superset', roles),
-        superset_can_share: findPermission(
-          'can_share_chart',
-          'Superset',
-          roles,
-        ),
-        superset_can_csv: findPermission('can_csv', 'Superset', roles),
-        slice_can_edit: findPermission('can_slice', 'Superset', roles),
+        superset_can_explore: findPermission('can_explore', 'Spotrix', roles),
+        superset_can_share: findPermission('can_share_chart', 'Spotrix', roles),
+        superset_can_csv: findPermission('can_csv', 'Spotrix', roles),
+        slice_can_edit: findPermission('can_slice', 'Spotrix', roles),
         common: {
           // legacy, please use state.common instead
           flash_messages: common.flash_messages,

@@ -619,7 +619,7 @@ function mapStateToProps(state) {
     standalone: explore.standalone,
     forcedHeight: explore.forced_height,
     chart,
-    timeout: explore.common.conf.SUPERSET_WEBSERVER_TIMEOUT,
+    timeout: explore.common.conf.SPOTRIX_WEBSERVER_TIMEOUT,
     ownState: dataMask[form_data.slice_id ?? 0]?.ownState, // 0 - unsaved chart
     impressionId,
     userId: explore.user_id,

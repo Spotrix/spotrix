@@ -29,8 +29,8 @@ export const user: UserWithPermissionsAndRoles = {
     ],
     sql_lab: [
       ['menu_access', 'SQL Lab'],
-      ['can_sql_json', 'Superset'],
-      ['can_search_queries', 'Superset'],
+      ['can_sql_json', 'Spotrix'],
+      ['can_search_queries', 'Spotrix'],
       ['can_csv', 'Superset'],
     ],
   },

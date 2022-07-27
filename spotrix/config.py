@@ -132,28 +132,28 @@ VIZ_ROW_LIMIT = 10000
 SAMPLES_ROW_LIMIT = 1000
 # max rows retrieved by filter select auto complete
 FILTER_SELECT_ROW_LIMIT = 10000
-SUPERSET_WORKERS = 2  # deprecated
-SUPERSET_CELERY_WORKERS = 32  # deprecated
+SPOTRIX_WORKERS = 2  # deprecated
+SPOTRIX_CELERY_WORKERS = 32  # deprecated
 
-SUPERSET_WEBSERVER_PROTOCOL = "http"
-SUPERSET_WEBSERVER_ADDRESS = "0.0.0.0"
-SUPERSET_WEBSERVER_PORT = 8088
+SPOTRIX_WEBSERVER_PROTOCOL = "http"
+SPOTRIX_WEBSERVER_ADDRESS = "0.0.0.0"
+SPOTRIX_WEBSERVER_PORT = 8088
 
 # This is an important setting, and should be lower than your
 # [load balancer / proxy / envoy / kong / ...] timeout settings.
 # You should also make sure to configure your WSGI server
 # (gunicorn, nginx, apache, ...) timeout setting to be <= to this setting
-SUPERSET_WEBSERVER_TIMEOUT = int(timedelta(minutes=1).total_seconds())
+SPOTRIX_WEBSERVER_TIMEOUT = int(timedelta(minutes=1).total_seconds())
 
 # this 2 settings are used by dashboard period force refresh feature
 # When user choose auto force refresh frequency
 # < SUPERSET_DASHBOARD_PERIODICAL_REFRESH_LIMIT
 # they will see warning message in the Refresh Interval Modal.
 # please check PR #9886
-SUPERSET_DASHBOARD_PERIODICAL_REFRESH_LIMIT = 0
-SUPERSET_DASHBOARD_PERIODICAL_REFRESH_WARNING_MESSAGE = None
+SPOTRIX_DASHBOARD_PERIODICAL_REFRESH_LIMIT = 0
+SPOTRIX_DASHBOARD_PERIODICAL_REFRESH_WARNING_MESSAGE = None
 
-SUPERSET_DASHBOARD_POSITION_DATA_LIMIT = 65535
+SPOTRIX_DASHBOARD_POSITION_DATA_LIMIT = 65535
 CUSTOM_SECURITY_MANAGER = None
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 # ---------------------------------------------------------

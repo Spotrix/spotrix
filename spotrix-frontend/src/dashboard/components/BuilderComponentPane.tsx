@@ -36,7 +36,7 @@ export interface BCPProps {
   topOffset: number;
 }
 
-const SUPERSET_HEADER_HEIGHT = 59;
+const SPOTRIX_HEADER_HEIGHT = 59;
 
 const BuilderComponentPaneTabs = styled(Tabs)`
   line-height: inherit;
@@ -47,7 +47,7 @@ const BuilderComponentPane: React.FC<BCPProps> = ({ topOffset = 0 }) => (
   <div
     className="dashboard-builder-sidepane"
     style={{
-      height: `calc(100vh - ${topOffset + SUPERSET_HEADER_HEIGHT}px)`,
+      height: `calc(100vh - ${topOffset + SPOTRIX_HEADER_HEIGHT}px)`,
     }}
   >
     <ParentSize>
@@ -78,7 +78,7 @@ const BuilderComponentPane: React.FC<BCPProps> = ({ topOffset = 0 }) => (
                     className="tab-charts"
                   >
                     <SliceAdder
-                      height={height + (isSticky ? SUPERSET_HEADER_HEIGHT : 0)}
+                      height={height + (isSticky ? SPOTRIX_HEADER_HEIGHT : 0)}
                     />
                   </Tabs.TabPane>
                 </BuilderComponentPaneTabs>

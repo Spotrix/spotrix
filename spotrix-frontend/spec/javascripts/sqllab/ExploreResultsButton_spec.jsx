@@ -41,7 +41,7 @@ describe('ExploreResultsButton', () => {
       ...sqlLabReducer(undefined, {}),
     },
     common: {
-      conf: { SUPERSET_WEBSERVER_TIMEOUT: 45 },
+      conf: { SPOTRIX_WEBSERVER_TIMEOUT: 45 },
     },
   };
   const store = mockStore(initialState);
