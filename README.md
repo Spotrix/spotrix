@@ -79,7 +79,6 @@ Spotrix can query data from any SQL-speaking datastore or data engine (e.g. Pres
 Here are some of the major database solutions that are supported:
 
 <div align="center">
-  <img src="./spotrix-frontend/images/guinsoolab-stack.jpg" alt="guinsoolab-stack" border="0" width="44" height="44" />
   <img src="./spotrix-frontend/images/redshift.png" alt="redshift" border="0" width="106" height="41" />
   <img src="./spotrix-frontend/images/google-biquery.png" alt="google-biquery" border="0" width="114" height="43" />
   <img src="./spotrix-frontend/images/snowflake.png" alt="snowflake" border="0" width="152" height="46" />
@@ -88,6 +87,7 @@ Here are some of the major database solutions that are supported:
   <img src="./spotrix-frontend/images/druid.png" alt="druid" border="0" width="135" height="37" />
   <img src="./spotrix-frontend/images/postgresql.png" alt="postgresql" border="0" width="132" height="81" />
   <img src="./spotrix-frontend/images/mysql.png" alt="mysql" border="0" width="119" height="62" />
+  <img src="./spotrix-frontend/images/guinsoolab-stack.jpg" alt="guinsoolab-stack" border="0" width="46" height="46" />
   <img src="./spotrix-frontend/images/mssql-server.png" alt="mssql-server" border="0" width="93" height="74" />
   <img src="./spotrix-frontend/images/db2.png" alt="db2" border="0" width="62" height="62" />
   <img src="./spotrix-frontend/images/sqlite.png" alt="sqlite" border="0" width="102" height="45" />
