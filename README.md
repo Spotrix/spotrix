@@ -32,6 +32,14 @@ A modern, enterprise-ready business intelligence web application.
 
 ## Snapshots & Gits
 
+### Spotrix Login
+
+![](./spotrix-frontend/images/login.png)
+
+### Spotrix Home
+
+![](./spotrix-frontend/images/overview-0.png)
+
 ### Explore Table Data
 
 ![](./spotrix-frontend/images/overview-1.png)
@@ -71,6 +79,7 @@ Spotrix can query data from any SQL-speaking datastore or data engine (e.g. Pres
 Here are some of the major database solutions that are supported:
 
 <div align="center">
+  <img src="./spotrix-frontend/images/guinsoolab-stack.jpg" alt="guinsoolab-stack" border="0" width="44" height="44" />
   <img src="./spotrix-frontend/images/redshift.png" alt="redshift" border="0" width="106" height="41" />
   <img src="./spotrix-frontend/images/google-biquery.png" alt="google-biquery" border="0" width="114" height="43" />
   <img src="./spotrix-frontend/images/snowflake.png" alt="snowflake" border="0" width="152" height="46" />
@@ -88,13 +97,12 @@ Here are some of the major database solutions that are supported:
   <img src="./spotrix-frontend/images/oracle.png" alt="oracle" border="0" width="121" height="66" />
   <img src="./spotrix-frontend/images/firebird.png" alt="firebird" border="0" width="86" height="56" />
   <img src="./spotrix-frontend/images/greenplum.png" alt="greenplum" border="0" width="140" height="45" />
-  <img src="./spotrix-frontend/images/clickhouse.png" alt="clickhouse" border="0" width="133" height="34" />
+  <img src="./spotrix-frontend/images/clickhouse.png" alt="clickhouse" border="0" width="140" height="37" />
   <img src="./spotrix-frontend/images/exasol.png" alt="exasol" border="0" width="106" height="59" />
   <img src="./spotrix-frontend/images/monet-db.png" alt="monet-db" border="0" width="106" height="46" />
   <img src="./spotrix-frontend/images/apache-kylin.png" alt="apache-kylin" border="0" width="56" height="64" />
   <img src="./spotrix-frontend/images/hologres.png" alt="hologres" border="0" width="71" height="64" />
   <img src="./spotrix-frontend/images/netezza.png" alt="netezza" border="0" width="64" height="64" />
-  <img src="./spotrix-frontend/images/guinsoolab-stack.jpg" alt="guinsoolab-stack" border="0" width="46" height="46" />
 </div>
 
 **A more comprehensive list of supported databases** along with the configuration instructions can be found

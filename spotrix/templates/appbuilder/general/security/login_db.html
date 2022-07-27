@@ -1,0 +1,68 @@
+<!-- extend base layout -->
+{% extends "appbuilder/base.html" %}
+
+{% block content %}
+
+<div class="login-hero-bg">
+  <img src="/static/assets/images/dw-hero-16-9-bg.jpg" height="100%" width="100%" alt="logo" style="z-index: 10; opacity: 90%">
+  <div class="row" style="padding: 12% 20%; z-index: 50; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: none; ">
+    <div class="col-xs-4" style="height: 100%; background: #f9f9f9; padding: 28px 30px">
+      <img src="/static/assets/images/spotrix.svg" height="48" alt="logo">
+    </div>
+    <div class="col-xs-8" style="height: 100%; background: #ffffff;">
+      <div id="loginbox" class="mainbox col-md-10 col-sm-10" style="height: 80%; width: 100%">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 style="color: #1b1f31">{{ title }}</h2>
+          </div>
+          <div style="padding-top:30px; height: 60%" class="panel-body" >
+              <form class="form" action="" method="post" name="login">
+                  {{form.hidden_tag()}}
+                  <div class="help-block">{{_("Enter your login and password below")}}:</div>
+                  <div class="control-group{% if form.errors.openid is defined %} error{% endif %}">
+                      <label class="control-label" for="openid">{{_("Username")}}:</label>
+                      <div class="controls">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                              {{ form.username(size = 80, class = "form-control", autofocus = true) }}
+                          </div>
+                          {% for error in form.errors.get('openid', []) %}
+                          <span class="help-inline">[{{error}}]</span><br>
+                          {% endfor %}
+                          <label class="control-label" for="openid">{{_("Password")}}:</label>
+
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                              {{ form.password(size = 80, class = "form-control") }}
+                          </div>
+                          {% for error in form.errors.get('openid', []) %}
+                          <span class="help-inline">[{{error}}]</span><br>
+                          {% endfor %}
+                      </div>
+                  </div>
+                  <div class="control-group">
+                      <div class="controls">
+                          <br>
+                          <div>
+                              <input class="btn btn-block" type="submit" value="{{_('Sign In')}}" style="color: #2181a2;" >
+                              {% if appbuilder.sm.auth_user_registration %}
+                              <a href="{{appbuilder.sm.get_url_for_registeruser}}" class="btn btn-block btn-primary" data-toggle="tooltip" rel="tooltip"
+                              title="{{_('If you are not already a user, please register')}}">
+                                  {{_('Register')}}
+                              </a>
+                              {% endif %}
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+      <div style="height: 20%; padding: 30px 15px;">
+        <p style="font-weight: 800; font-size: 16px;">Don't have an account yet?</p>
+        <p><b style="color: #2181a2;">Create a new account</b> or <span style="color: #2181a2;">try out Spotrix</span> without signing up.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
