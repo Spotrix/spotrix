@@ -34,9 +34,24 @@ const ToastContainer = styled.div`
   }
 `;
 
-const StyledIcon = (theme: SupersetTheme) => css`
+const InfoStyledIcon = (theme: SupersetTheme) => css`
   min-width: ${theme.gridUnit * 5}px;
-  color: ${theme.colors.grayscale.base};
+  color: ${theme.colors.info.base};
+`;
+
+const SuccessStyledIcon = (theme: SupersetTheme) => css`
+  min-width: ${theme.gridUnit * 5}px;
+  color: ${theme.colors.success.base};
+`;
+
+const WarningStyledIcon = (theme: SupersetTheme) => css`
+  min-width: ${theme.gridUnit * 5}px;
+  color: ${theme.colors.warning.base};
+`;
+
+const DangerStyledIcon = (theme: SupersetTheme) => css`
+  min-width: ${theme.gridUnit * 5}px;
+  color: ${theme.colors.error.base};
 `;
 
 interface ToastPresenterProps {
@@ -78,16 +93,16 @@ export default function Toast({ toast, onCloseToast }: ToastPresenterProps) {
   }, [handleClosePress, toast.duration]);
 
   let className = 'toast--success';
-  let icon = <Icons.CircleCheckSolid css={theme => StyledIcon(theme)} />;
+  let icon = <Icons.CircleCheckSolid css={theme => SuccessStyledIcon(theme)} />;
 
   if (toast.toastType === ToastType.WARNING) {
-    icon = <Icons.WarningSolid css={StyledIcon} />;
+    icon = <Icons.WarningSolid css={WarningStyledIcon} />;
     className = 'toast--warning';
   } else if (toast.toastType === ToastType.DANGER) {
-    icon = <Icons.ErrorSolid css={StyledIcon} />;
+    icon = <Icons.ErrorSolid css={DangerStyledIcon} />;
     className = 'toast--danger';
   } else if (toast.toastType === ToastType.INFO) {
-    icon = <Icons.InfoSolid css={StyledIcon} />;
+    icon = <Icons.InfoSolid css={InfoStyledIcon} />;
     className = 'toast--info';
   }
 
