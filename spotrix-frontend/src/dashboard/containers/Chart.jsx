@@ -81,7 +81,7 @@ function mapStateToProps(
     chart,
     datasource,
     slice: sliceEntities.slices[id],
-    timeout: dashboardInfo.common.conf.SUPERSET_WEBSERVER_TIMEOUT,
+    timeout: dashboardInfo.common.conf.SPOTRIX_WEBSERVER_TIMEOUT,
     filters: getActiveFilters() || EMPTY_FILTERS,
     formData,
     editMode: dashboardState.editMode,

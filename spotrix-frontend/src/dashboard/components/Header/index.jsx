@@ -367,7 +367,7 @@ class Header extends React.PureComponent {
     // make sure positions data less than DB storage limitation:
     const positionJSONLength = safeStringify(positions).length;
     const limit =
-      dashboardInfo.common.conf.SUPERSET_DASHBOARD_POSITION_DATA_LIMIT ||
+      dashboardInfo.common.conf.SPOTRIX_DASHBOARD_POSITION_DATA_LIMIT ||
       DASHBOARD_POSITION_DATA_LIMIT;
     if (positionJSONLength >= limit) {
       this.props.addDangerToast(
@@ -474,10 +474,10 @@ class Header extends React.PureComponent {
     const userCanSaveAs = dashboardInfo.dash_save_perm;
     const shouldShowReport = !editMode && this.canAddReports();
     const refreshLimit =
-      dashboardInfo.common.conf.SUPERSET_DASHBOARD_PERIODICAL_REFRESH_LIMIT;
+      dashboardInfo.common.conf.SPOTRIX_DASHBOARD_PERIODICAL_REFRESH_LIMIT;
     const refreshWarning =
       dashboardInfo.common.conf
-        .SUPERSET_DASHBOARD_PERIODICAL_REFRESH_WARNING_MESSAGE;
+        .SPOTRIX_DASHBOARD_PERIODICAL_REFRESH_WARNING_MESSAGE;
 
     return (
       <StyledDashboardHeader

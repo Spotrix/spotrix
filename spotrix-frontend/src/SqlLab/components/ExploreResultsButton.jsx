@@ -179,7 +179,7 @@ ExploreResultsButton.defaultProps = defaultProps;
 function mapStateToProps({ sqlLab, common }) {
   return {
     errorMessage: sqlLab.errorMessage,
-    timeout: common.conf ? common.conf.SUPERSET_WEBSERVER_TIMEOUT : null,
+    timeout: common.conf ? common.conf.SPOTRIX_WEBSERVER_TIMEOUT : null,
   };
 }
 

@@ -25,6 +25,7 @@ import { FormLabel } from 'src/components/Form';
 import VizTypeGallery, {
   MAX_ADVISABLE_VIZ_GALLERY_WIDTH,
 } from 'src/explore/components/controls/VizTypeControl/VizTypeGallery';
+import { Col, Row } from 'src/common/components';
 
 interface Datasource {
   label: string;
@@ -43,6 +44,8 @@ export type AddSliceContainerState = {
 };
 
 const ESTIMATED_NAV_HEIGHT = '56px';
+const APP_HEADER_HEIGHT = '47px';
+const APP_NAV_WIDTH = '60px';
 
 const StyledContainer = styled.div`
   ${({ theme }) => `
@@ -50,9 +53,9 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100vw - ${APP_NAV_WIDTH});
     max-width: ${MAX_ADVISABLE_VIZ_GALLERY_WIDTH}px;
-    max-height: calc(100vh - ${ESTIMATED_NAV_HEIGHT});
+    max-height: calc(100vh - ${ESTIMATED_NAV_HEIGHT} - ${APP_HEADER_HEIGHT});
     border-radius: ${theme.gridUnit}px;
     background-color: ${theme.colors.grayscale.light5};
     margin-left: auto;
@@ -144,7 +147,26 @@ export default class AddSliceContainer extends React.PureComponent<
   render() {
     return (
       <StyledContainer>
-        <h3 css={cssStatic}>{t('Create a new chart')}</h3>
+        <Row align="middle">
+          <Col md={16} xs={16}>
+            <h3>{t('Create a new chart')}</h3>
+          </Col>
+          <Col md={8} xs={8} style={{ textAlign: 'right' }}>
+            <Button
+              css={[
+                cssStatic,
+                css`
+                  align-self: flex-end;
+                `,
+              ]}
+              buttonStyle="primary"
+              disabled={this.isBtnDisabled()}
+              onClick={this.gotoSlice}
+            >
+              {t('Create new chart')}
+            </Button>
+          </Col>
+        </Row>
         <div className="dataset">
           <Select
             autoFocus
@@ -159,10 +181,10 @@ export default class AddSliceContainer extends React.PureComponent<
           />
           <span>
             {t(
-              'Instructions to add a dataset are available in the Superset tutorial.',
+              'Instructions to add a dataset are available in the Spotrix tutorial.',
             )}{' '}
             <a
-              href="https://superset.apache.org/docs/creating-charts-dashboards/first-dashboard#adding-a-new-table"
+              href="https://ciusji.gitbook.io/spotrix/creating-charts/creating-your-charts"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -174,19 +196,6 @@ export default class AddSliceContainer extends React.PureComponent<
           onChange={this.changeVisType}
           selectedViz={this.state.visType}
         />
-        <Button
-          css={[
-            cssStatic,
-            css`
-              align-self: flex-end;
-            `,
-          ]}
-          buttonStyle="primary"
-          disabled={this.isBtnDisabled()}
-          onClick={this.gotoSlice}
-        >
-          {t('Create new chart')}
-        </Button>
       </StyledContainer>
     );
   }

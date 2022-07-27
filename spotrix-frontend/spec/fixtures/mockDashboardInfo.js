@@ -34,6 +34,6 @@ export default {
   dash_save_perm: true,
   common: {
     flash_messages: [],
-    conf: { ENABLE_JAVASCRIPT_CONTROLS: false, SUPERSET_WEBSERVER_TIMEOUT: 60 },
+    conf: { ENABLE_JAVASCRIPT_CONTROLS: false, SPOTRIX_WEBSERVER_TIMEOUT: 60 },
   },
 };

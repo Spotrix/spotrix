@@ -575,7 +575,7 @@ export function refreshChart(chartKey, force, dashboardId) {
   return (dispatch, getState) => {
     const chart = (getState().charts || {})[chartKey];
     const timeout = getState().dashboardInfo.common.conf
-      .SUPERSET_WEBSERVER_TIMEOUT;
+      .SPOTRIX_WEBSERVER_TIMEOUT;
 
     if (
       !chart.latestQueryFormData ||
