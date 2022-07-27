@@ -526,6 +526,7 @@ class Header extends React.PureComponent {
                       buttonStyle={
                         this.state.emphasizeUndo ? 'primary' : undefined
                       }
+                      style={{ backgroundColor: '#ffffff' }}
                     >
                       <i
                         title="Undo"
@@ -541,6 +542,7 @@ class Header extends React.PureComponent {
                       buttonStyle={
                         this.state.emphasizeRedo ? 'primary' : undefined
                       }
+                      style={{ backgroundColor: '#ffffff' }}
                     >
                       &nbsp;
                       <i title="Redo" className="redo-action fa fa-share" />
