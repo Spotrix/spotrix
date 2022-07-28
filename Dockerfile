@@ -19,7 +19,7 @@
 # PY stage that simply does a pip install on our requirements
 ######################################################################
 ARG PY_VER=3.7.9
-FROM python:${PY_VER} AS superset-py
+FROM python:${PY_VER} AS spotrix-py
 
 RUN mkdir /app \
         && apt-get update -y \
@@ -35,17 +35,17 @@ RUN mkdir /app \
 # in order to only build if and only if requirements change
 COPY ./requirements/*.txt  /app/requirements/
 COPY setup.py MANIFEST.in README.md /app/
-COPY superset-frontend/package.json /app/superset-frontend/
+COPY spotrix-frontend/package.json /app/spotrix-frontend/
 RUN cd /app \
-    && mkdir -p superset/static \
-    && touch superset/static/version_info.json \
+    && mkdir -p spotrix/static \
+    && touch spotrix/static/version_info.json \
     && pip install --no-cache -r requirements/local.txt
 
 
 ######################################################################
 # Node stage to deal with static asset construction
 ######################################################################
-FROM node:14 AS superset-node
+FROM node:14 AS spotrix-node
 
 ARG NPM_VER=7
 RUN npm install -g npm@${NPM_VER}
@@ -54,18 +54,18 @@ ARG NPM_BUILD_CMD="build"
 ENV BUILD_CMD=${NPM_BUILD_CMD}
 
 # NPM ci first, as to NOT invalidate previous steps except for when package.json changes
-RUN mkdir -p /app/superset-frontend
-RUN mkdir -p /app/superset/assets
+RUN mkdir -p /app/spotrix-frontend
+RUN mkdir -p /app/spotrix/assets
 COPY ./docker/frontend-mem-nag.sh /
-COPY ./superset-frontend/package* /app/superset-frontend/
+COPY ./spotrix-frontend/package* /app/spotrix-frontend/
 RUN /frontend-mem-nag.sh \
-        && cd /app/superset-frontend \
+        && cd /app/spotrix-frontend \
         && npm ci
 
 # Next, copy in the rest and let webpack do its thing
-COPY ./superset-frontend /app/superset-frontend
+COPY ./spotrix-frontend /app/spotrix-frontend
 # This is BY FAR the most expensive step (thanks Terser!)
-RUN cd /app/superset-frontend \
+RUN cd /app/spotrix-frontend \
         && npm run ${BUILD_CMD} \
         && rm -rf node_modules
 
@@ -79,13 +79,13 @@ FROM python:${PY_VER} AS lean
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     FLASK_ENV=production \
-    FLASK_APP="superset.app:create_app()" \
+    FLASK_APP="spotrix.app:create_app()" \
     PYTHONPATH="/app/pythonpath" \
-    SPOTRIX_HOME="/app/superset_home" \
+    SPOTRIX_HOME="/app/spotrix_home" \
     SPOTRIX_PORT=8088
 
 RUN mkdir -p ${PYTHONPATH} \
-        && useradd --user-group -d ${SPOTRIX_HOME} -m --no-log-init --shell /bin/bash superset \
+        && useradd --user-group -d ${SPOTRIX_HOME} -m --no-log-init --shell /bin/bash spotrix \
         && apt-get update -y \
         && apt-get install -y --no-install-recommends \
             build-essential \
@@ -94,24 +94,24 @@ RUN mkdir -p ${PYTHONPATH} \
             libpq-dev \
         && rm -rf /var/lib/apt/lists/*
 
-COPY --from=superset-py /usr/local/lib/python3.7/site-packages/ /usr/local/lib/python3.7/site-packages/
+COPY --from=spotrix-py /usr/local/lib/python3.7/site-packages/ /usr/local/lib/python3.7/site-packages/
 # Copying site-packages doesn't move the CLIs, so let's copy them one by one
-COPY --from=superset-py /usr/local/bin/gunicorn /usr/local/bin/celery /usr/local/bin/flask /usr/bin/
-COPY --from=superset-node /app/superset/static/assets /app/superset/static/assets
-COPY --from=superset-node /app/superset-frontend /app/superset-frontend
+COPY --from=spotrix-py /usr/local/bin/gunicorn /usr/local/bin/celery /usr/local/bin/flask /usr/bin/
+COPY --from=spotrix-node /app/spotrix/static/assets /app/spotrix/static/assets
+COPY --from=spotrix-node /app/spotrix-frontend /app/spotrix-frontend
 
-## Lastly, let's install superset itself
-COPY superset /app/superset
+## Lastly, let's install spotrix itself
+COPY spotrix /app/spotrix
 COPY setup.py MANIFEST.in README.md /app/
 RUN cd /app \
-        && chown -R superset:superset * \
+        && chown -R spotrix:spotrix * \
         && pip install -e .
 
 COPY ./docker/docker-entrypoint.sh /usr/bin/
 
 WORKDIR /app
 
-USER superset
+USER spotrix
 
 HEALTHCHECK CMD curl -f "http://localhost:$SPOTRIX_PORT/health"
 
@@ -148,7 +148,7 @@ RUN wget https://download-installer.cdn.mozilla.net/pub/firefox/releases/${FIREF
 RUN cd /app \
     && pip install --no-cache -r requirements/docker.txt \
     && pip install --no-cache -r requirements/requirements-local.txt || true
-USER superset
+USER spotrix
 
 
 ######################################################################
@@ -156,9 +156,9 @@ USER superset
 ######################################################################
 FROM lean AS ci
 
-COPY --chown=superset ./docker/docker-bootstrap.sh /app/docker/
-COPY --chown=superset ./docker/docker-init.sh /app/docker/
-COPY --chown=superset ./docker/docker-ci.sh /app/docker/
+COPY --chown=spotrix ./docker/docker-bootstrap.sh /app/docker/
+COPY --chown=spotrix ./docker/docker-init.sh /app/docker/
+COPY --chown=spotrix ./docker/docker-ci.sh /app/docker/
 
 RUN chmod a+x /app/docker/*.sh
 
