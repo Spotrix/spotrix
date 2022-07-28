@@ -211,7 +211,7 @@ class HeaderActionsDropdown extends React.PureComponent {
       addDangerToast,
     } = this.props;
 
-    const emailTitle = t('Superset dashboard');
+    const emailTitle = t('Spotrix dashboard');
     const emailSubject = `${emailTitle} ${dashboardTitle}`;
     const emailBody = t('Check out this dashboard: ');
 

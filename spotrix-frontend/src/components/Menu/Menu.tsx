@@ -26,6 +26,7 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Grid } from 'antd';
 import Icons from 'src/components/Icons';
 import { URL_PARAMS } from 'src/constants';
+import Avatar from 'antd/lib/avatar/avatar';
 import RightMenu from './MenuRight';
 import { Languages } from './LanguagePicker';
 
@@ -357,7 +358,7 @@ export function Menu({
           <li
             style={{
               position: 'absolute',
-              bottom: 0,
+              bottom: '50px',
               left: 0,
               width: '60px',
               justifyContent: 'center',
@@ -369,7 +370,24 @@ export function Menu({
               }
             />
           </li>
+          <li
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '60px',
+              justifyContent: 'center',
+            }}
+          >
+            <Icons.Full onClick={() => window.open('/logout', '_self')} />
+          </li>
         </ul>
+      </div>
+      <div className="userAvatar">
+        <Avatar
+          shape="circle"
+          src="https://avatars.githubusercontent.com/u/57523094?s=96&v=4"
+        />
       </div>
     </StyledHeader>
   );
