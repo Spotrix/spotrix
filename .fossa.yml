@@ -26,8 +26,8 @@ analyze:
   modules:
   - name: assets
     type: npm
-    target: superset-frontend
-    path: superset-frontend
+    target: spotrix-frontend
+    path: spotrix-frontend
   - name: base
     type: pip
     target: .
