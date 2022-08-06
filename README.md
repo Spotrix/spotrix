@@ -30,27 +30,33 @@ A modern, enterprise-ready business intelligence web application.
 - **Modern architecture**: Spotrix is lightweight and highly scalable, leveraging the power of your existing data infrastructure without requiring yet another ingestion layer.
 - **Rich visualizations and dashboards**: Spotrix ships with a wide array of beautiful visualizations. Our visualization plug-in architecture makes it easy to build custom visualizations that drop directly into Spotrix.
 
+## Charts Gallery
+
+![charts-gallery](./spotrix-frontend/images/gallery.png)
+
+More Charts, please refer to [here](https://ciusji.gitbook.io/spotrix/).
+
 ## Snapshots & Gits
 
 ### Spotrix Login
 
-![](./spotrix-frontend/images/login.png)
+![login](./spotrix-frontend/images/login.png)
 
 ### Spotrix Home
 
-![](./spotrix-frontend/images/overview-0.png)
+![overview](./spotrix-frontend/images/overview-0.png)
 
 ### Explore Table Data
 
-![](./spotrix-frontend/images/overview-1.png)
+![overview](./spotrix-frontend/images/overview-1.png)
 
 ### Explore Map data
 
-![](./spotrix-frontend/images/overview-2.png)
+![overview](./spotrix-frontend/images/overview-2.png)
 
 ### Charts List
 
-![](./spotrix-frontend/images/overview-3.png)
+![overview](./spotrix-frontend/images/overview-3.png)
 
 ## Why Spotrix?
 
