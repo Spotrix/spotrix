@@ -55,7 +55,7 @@ const ButtonContainer = styled.div`
 `;
 
 const DatasourceContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.grayscale.light4};
+  // background-color: ${({ theme }) => theme.colors.grayscale.light4};
   position: relative;
   height: 100%;
   display: flex;
