@@ -46,11 +46,11 @@ More Charts, please refer to [here](https://ciusji.gitbook.io/spotrix/).
 
 ![overview](./spotrix-frontend/images/overview-0.png)
 
-### Explore Table Data
+### Table Viz
 
 ![overview](./spotrix-frontend/images/overview-1.png)
 
-### Explore Map data
+### Line Viz
 
 ![overview](./spotrix-frontend/images/overview-2.png)
 
