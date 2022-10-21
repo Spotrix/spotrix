@@ -23,18 +23,14 @@
 
 A modern, enterprise-ready business intelligence web application.
 
+![spotrix-de](./spotrix-frontend/images/persona-decision-enablers-full-width.png)
+
 ## Feature
 
 - **Powerful yet easy to use**: Quickly and easily integrate and explore your data, using either our simple no-code viz builder or state-of-the-art SQL IDE.
 - **Integrates with modern databases**: Spotrix can connect to any SQL based datasource through SQLAlchemy, including modern cloud native databases and engines at petabyte scale.
 - **Modern architecture**: Spotrix is lightweight and highly scalable, leveraging the power of your existing data infrastructure without requiring yet another ingestion layer.
 - **Rich visualizations and dashboards**: Spotrix ships with a wide array of beautiful visualizations. Our visualization plug-in architecture makes it easy to build custom visualizations that drop directly into Spotrix.
-
-## Charts Gallery
-
-![charts-gallery](./spotrix-frontend/images/gallery.png)
-
-More Charts, please refer to [here](https://ciusji.gitbook.io/spotrix/).
 
 ## Snapshots & Gits
 
