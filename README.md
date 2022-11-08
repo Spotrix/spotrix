@@ -25,6 +25,7 @@ A modern, enterprise-ready business intelligence web application.
 
 ![spotrix-de](./spotrix-frontend/images/persona-decision-enablers-full-width.png)
 
+
 ## Feature
 
 - **Embedded and server modes; disk-based or in-memory databases**: Interactive data analysis, e.g. Joining & aggregate multiple large tables, so simple and fast.
@@ -33,27 +34,6 @@ A modern, enterprise-ready business intelligence web application.
 - **Modern architecture**: Spotrix is lightweight and highly scalable, leveraging the power of your existing data infrastructure without requiring yet another ingestion layer.
 - **Rich visualizations and dashboards**: Spotrix ships with a wide array of beautiful visualizations. Our visualization plug-in architecture makes it easy to build custom visualizations that drop directly into Spotrix.
 
-## Snapshots & Gits
-
-### Spotrix Login
-
-![login](./spotrix-frontend/images/login.png)
-
-### Spotrix Home
-
-![overview](./spotrix-frontend/images/overview-0.png)
-
-### Table Viz
-
-![overview](./spotrix-frontend/images/overview-1.png)
-
-### Line Viz
-
-![overview](./spotrix-frontend/images/overview-2.png)
-
-### Charts List
-
-![overview](./spotrix-frontend/images/overview-3.png)
 
 ## Why Spotrix?
 
@@ -88,6 +68,30 @@ Spotrix is also cloud-naive in the sense that it is flexible and lets you choose
 
 Spotrix also works well with services like [LeonaLog](https://github.com/LeonaLog), NewRelic, StatsD and DataDog, and has the 
 ability to run analytic workloads against most popular database technologies.
+
+
+## Snapshots & Gits
+
+### Spotrix Login
+
+![login](./spotrix-frontend/images/login.png)
+
+### Spotrix Home
+
+![overview](./spotrix-frontend/images/overview-0.png)
+
+### Table Viz
+
+![overview](./spotrix-frontend/images/overview-1.png)
+
+### Line Viz
+
+![overview](./spotrix-frontend/images/overview-2.png)
+
+### Charts List
+
+![overview](./spotrix-frontend/images/overview-3.png)
+
 
 ## Supported Databases
 
