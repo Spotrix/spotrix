@@ -75,6 +75,20 @@ Spotrix provides:
 - An API for programmatic customization
 - A cloud-native architecture designed from the ground up for scale
 
+Spotrix is cloud-native and designed to be highly available. It was designed to scale out to large, distributed 
+environment and works very well inside containers. While you can easily test drive Spotrix on a modest setup or simple 
+on your laptop, there's virtually no limit around scaling out the platform.
+
+Spotrix is also cloud-naive in the sense that it is flexible and lets you choose the:
+
+* Web server (Gunicorn, Nginx)
+* Metadata database engine (MySQL, Postgres, MariaDB, Sqlite, [Guinsoo 🚀](https://github.com/ciusji/guinsoo), etc)
+* Message queue (Redis, RabbitMQ, etc)
+* Results backend (S3, MinIO, [AnnaStore 🌈](https://github.com/GuinsooLab/annastore), etc)
+
+Spotrix also works well with services like [LeonaLog](https://github.com/LeonaLog), NewRelic, StatsD and DataDog, and has the 
+ability to run analytic workloads against most popular database technologies.
+
 ## Supported Databases
 
 Spotrix can query data from any SQL-speaking datastore or data engine (e.g. Presto or Athena) that has a Python DB-API driver and a SQLAlchemy dialect.
