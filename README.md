@@ -55,6 +55,8 @@ Spotrix provides:
 - An API for programmatic customization
 - A cloud-native architecture designed from the ground up for scale
 
+![spotrix-ecosystem](./spotrix-frontend/images/persona-decision-enablers-full-width.png)
+
 Spotrix is cloud-native and designed to be highly available. It was designed to scale out to large, distributed 
 environment and works very well inside containers. While you can easily test drive Spotrix on a modest setup or simple 
 on your laptop, there's virtually no limit around scaling out the platform.
@@ -66,17 +68,8 @@ Spotrix is also cloud-naive in the sense that it is flexible and lets you choose
 * Message queue (Redis, RabbitMQ, etc)
 * Results backend (S3, MinIO, [AnnaStore 🌈](https://github.com/GuinsooLab/annastore), etc)
 
-![spotrix-ecosystem](./spotrix-frontend/images/persona-decision-enablers-full-width.png)
-
 Spotrix also works well with services like [LeonaLog](https://github.com/LeonaLog), NewRelic, StatsD and DataDog, and has the 
 ability to run analytic workloads against most popular database technologies.
-
-
-## Snapshots & Gits
-
-### Explore Overview
-
-![overview](./spotrix-frontend/images/overview-2.png)
 
 
 ## Supported Databases
@@ -106,7 +99,7 @@ Here are some of the major database solutions that are supported:
   <img src="./spotrix-frontend/images/greenplum.png" alt="greenplum" border="0" width="140" height="45" />
   <img src="./spotrix-frontend/images/clickhouse.png" alt="clickhouse" border="0" width="140" height="37" />
   <img src="./spotrix-frontend/images/exasol.png" alt="exasol" border="0" width="106" height="59" />
-  <img src="./spotrix-frontend/images/guinsoo.png" alt="guinsoo" border="0" width="106" height="59" />
+  <img src="./spotrix-frontend/images/guinsoo.png" alt="guinsoo" border="0" width="62" height="46" />
   <img src="./spotrix-frontend/images/monet-db.png" alt="monet-db" border="0" width="106" height="46" />
   <img src="./spotrix-frontend/images/apache-kylin.png" alt="apache-kylin" border="0" width="56" height="64" />
   <img src="./spotrix-frontend/images/hologres.png" alt="hologres" border="0" width="71" height="64" />
