@@ -15,4 +15,5 @@
 # limitations under the License.
 #
 FLASK_APP="spotrix.app:create_app()"
+# env: development | testing | production
 FLASK_ENV="development"
