@@ -28,7 +28,7 @@ A modern, enterprise-ready business intelligence web application.
 
 ## Features
 
-- **Embedded and server modes; disk-based or in-memory databases**: Interactive data analysis, e.g. Joining & aggregate multiple large tables, so simple and fast.
+- **Embedded and server modes & disk-based or in-memory databases**: Interactive data analysis, e.g. [Joining & aggregate](https://ciusji.gitbook.io/guinsoo/reference/aggregate) multiple large tables, so simple and fast.
 - **Powerful yet easy to use**: Quickly and easily integrate and explore your data, using either our simple no-code viz builder or state-of-the-art SQL IDE.
 - **Integrates with modern databases**: _Spotrix_ can connect to any SQL based datasource through SQLAlchemy, including modern cloud native databases and engines at petabyte scale.
 - **Modern architecture**: Spotrix is lightweight and highly scalable, leveraging the power of your existing data infrastructure without requiring yet another ingestion layer.
