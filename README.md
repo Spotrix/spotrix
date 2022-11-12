@@ -23,10 +23,10 @@
 
 A modern, enterprise-ready business intelligence web application.
 
-![spotrix-de](./spotrix-frontend/images/persona-decision-enablers-full-width.png)
+![spotrix-overview](./spotrix-frontend/images/spotrix-overview.gif)
 
 
-## Feature
+## Features
 
 - **Embedded and server modes; disk-based or in-memory databases**: Interactive data analysis, e.g. Joining & aggregate multiple large tables, so simple and fast.
 - **Powerful yet easy to use**: Quickly and easily integrate and explore your data, using either our simple no-code viz builder or state-of-the-art SQL IDE.
@@ -66,31 +66,17 @@ Spotrix is also cloud-naive in the sense that it is flexible and lets you choose
 * Message queue (Redis, RabbitMQ, etc)
 * Results backend (S3, MinIO, [AnnaStore 🌈](https://github.com/GuinsooLab/annastore), etc)
 
+![spotrix-ecosystem](./spotrix-frontend/images/persona-decision-enablers-full-width.png)
+
 Spotrix also works well with services like [LeonaLog](https://github.com/LeonaLog), NewRelic, StatsD and DataDog, and has the 
 ability to run analytic workloads against most popular database technologies.
 
 
 ## Snapshots & Gits
 
-### Spotrix Login
-
-![login](./spotrix-frontend/images/login.png)
-
-### Spotrix Home
-
-![overview](./spotrix-frontend/images/overview-0.png)
-
-### Table Viz
-
-![overview](./spotrix-frontend/images/overview-1.png)
-
-### Line Viz
+### Explore Overview
 
 ![overview](./spotrix-frontend/images/overview-2.png)
-
-### Charts List
-
-![overview](./spotrix-frontend/images/overview-3.png)
 
 
 ## Supported Databases
@@ -120,6 +106,7 @@ Here are some of the major database solutions that are supported:
   <img src="./spotrix-frontend/images/greenplum.png" alt="greenplum" border="0" width="140" height="45" />
   <img src="./spotrix-frontend/images/clickhouse.png" alt="clickhouse" border="0" width="140" height="37" />
   <img src="./spotrix-frontend/images/exasol.png" alt="exasol" border="0" width="106" height="59" />
+  <img src="./spotrix-frontend/images/guinsoo.png" alt="guinsoo" border="0" width="106" height="59" />
   <img src="./spotrix-frontend/images/monet-db.png" alt="monet-db" border="0" width="106" height="46" />
   <img src="./spotrix-frontend/images/apache-kylin.png" alt="apache-kylin" border="0" width="56" height="64" />
   <img src="./spotrix-frontend/images/hologres.png" alt="hologres" border="0" width="71" height="64" />
