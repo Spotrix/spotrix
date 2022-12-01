@@ -24,7 +24,7 @@ import { Tooltip } from 'src/components/Tooltip';
 import copyTextToClipboard from 'src/utils/copy';
 import withToasts from 'src/messageToasts/enhancers/withToasts';
 import { useUrlShortener } from 'src/common/hooks/useUrlShortener';
-import EmbedCodeButton from './EmbedCodeButton';
+// import EmbedCodeButton from './EmbedCodeButton';
 import { exportChart, getExploreLongUrl } from '../exploreUtils';
 import ExploreAdditionalActionsMenu from './ExploreAdditionalActionsMenu';
 
@@ -110,6 +110,7 @@ const ExploreActionButtons = (props: ExploreActionButtonsProps) => {
     }
   };
 
+  // @ts-ignore
   const doShareEmail = async () => {
     try {
       const subject = t('Superset Chart');
@@ -121,6 +122,7 @@ const ExploreActionButtons = (props: ExploreActionButtonsProps) => {
     }
   };
 
+  // @ts-ignore
   const doExportCSV = canDownloadCSV
     ? exportChart.bind(this, {
         formData: latestQueryFormData,
@@ -129,12 +131,14 @@ const ExploreActionButtons = (props: ExploreActionButtonsProps) => {
       })
     : null;
 
+  // @ts-ignore
   const doExportJson = exportChart.bind(this, {
     formData: latestQueryFormData,
     resultType: 'results',
     resultFormat: 'json',
   });
 
+  // @ts-ignore
   const exportToCSVClasses = cx('btn btn-default btn-sm', {
     disabled: !canDownloadCSV,
   });
@@ -156,25 +160,25 @@ const ExploreActionButtons = (props: ExploreActionButtonsProps) => {
               !value && setTimeout(() => setCopyTooltip(copyTooltipText), 200)
             }
           />
-          <ActionButton
-            icon={<Icons.Email iconSize="l" />}
-            tooltip={t('Share chart by email')}
-            onClick={doShareEmail}
-          />
-          <EmbedCodeButton latestQueryFormData={latestQueryFormData} />
-          <ActionButton
-            icon={<Icons.FileTextOutlined iconSize="m" />}
-            text=".JSON"
-            tooltip={t('Export to .JSON format')}
-            onClick={doExportJson}
-          />
-          <ActionButton
-            icon={<Icons.FileExcelOutlined iconSize="m" />}
-            text=".CSV"
-            tooltip={t('Export to .CSV format')}
-            onClick={doExportCSV}
-            className={exportToCSVClasses}
-          />
+          {/* <ActionButton */}
+          {/*  icon={<Icons.Email iconSize="l" />} */}
+          {/*  tooltip={t('Share chart by email')} */}
+          {/*  onClick={doShareEmail} */}
+          {/* /> */}
+          {/* <EmbedCodeButton latestQueryFormData={latestQueryFormData} /> */}
+          {/* <ActionButton */}
+          {/*  icon={<Icons.FileTextOutlined iconSize="m" />} */}
+          {/*  text=".JSON" */}
+          {/*  tooltip={t('Export to .JSON format')} */}
+          {/*  onClick={doExportJson} */}
+          {/* /> */}
+          {/* <ActionButton */}
+          {/*  icon={<Icons.FileExcelOutlined iconSize="m" />} */}
+          {/*  text=".CSV" */}
+          {/*  tooltip={t('Export to .CSV format')} */}
+          {/*  onClick={doExportCSV} */}
+          {/*  className={exportToCSVClasses} */}
+          {/* /> */}
         </>
       )}
       <ExploreAdditionalActionsMenu
