@@ -98,9 +98,18 @@ def version(verbose: bool) -> None:
     print(Fore.BLUE + "-=" * 15)
     print(
         Fore.YELLOW
-        + "Spotrix "
+        + """
+ ___                  _                  
+(  _`\               ( )_        _       
+| (_(_) _ _      _   | ,_) _ __ (_)      
+`\__ \ ( '_`\  /'_`\ | |  ( '__)| |(`\/')
+( )_) || (_) )( (_) )| |_ | |   | | >  < 
+`\____)| ,__/'`\___/'`\__)(_)   (_)(_/\_)
+       | |                               
+       (_)                               
+        """
         + Fore.CYAN
-        + "{version}".format(version=app.config["VERSION_STRING"])
+        + "\nVersion: {version}".format(version=app.config["VERSION_STRING"])
     )
     print(Fore.BLUE + "-=" * 15)
     if verbose:
