@@ -116,7 +116,6 @@ def version(verbose: bool) -> None:
         print("[DB] : " + "{}".format(db.engine))
     print(Style.RESET_ALL)
 
-
 def load_examples_run(
     load_test_data: bool = False,
     load_big_data: bool = False,
