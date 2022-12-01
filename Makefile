@@ -29,22 +29,8 @@ spotrix:
 	# Install in editable (development) mode
 	pip install -e .
 
-	# Create an admin user in your metadata database
-	spotrix fab create-admin \
-              --username admin \
-              --firstname Spotrix \
-              --lastname Admin \
-              --email bqjimaster@gmail.com \
-              --password admin
-
-	# Initialize the database
-	spotrix db upgrade
-
-	# Create default roles and permissions
+	# Init spotrix server
 	spotrix init
-
-	# Load some data to play with
-	spotrix load-examples
 
 update: update-py update-js
 
@@ -54,9 +40,6 @@ update-py:
 
 	# Install in editable (development) mode
 	pip install -e .
-
-	# Initialize the database
-	spotrix db upgrade
 
 	# Create default roles and permissions
 	spotrix init
