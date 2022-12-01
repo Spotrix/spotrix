@@ -35,6 +35,17 @@ A modern, enterprise-ready business intelligence web application.
 - **Rich visualizations and dashboards**: Spotrix ships with a wide array of beautiful visualizations. Our visualization plug-in architecture makes it easy to build custom visualizations that drop directly into Spotrix.
 
 
+## Quickstart
+
+First, Install & run your spotrix server with python3 env:
+```shell
+pip install spotrix
+spotrix init
+spotrix run
+```
+Then, open your browser with http://localhost:5000, enjoying your explore.
+
+
 ## Why Spotrix?
 
 Spotrix provides:
