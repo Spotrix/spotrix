@@ -190,7 +190,7 @@ function ExploreViewContainer(props) {
   };
 
   const defaultSidebarsWidth = {
-    controls_width: 320,
+    controls_width: 300,
     datasource_width: 270,
   };
 
@@ -548,7 +548,7 @@ function ExploreViewContainer(props) {
         minWidth={defaultSidebarsWidth[storageKeys.controlsWidth]}
         maxWidth="33%"
         enable={{ right: true }}
-        className="col-sm-3 explore-column controls-column"
+        className="col-sm-2 explore-column controls-column"
       >
         <QueryAndSaveBtns
           canAdd={!!(props.can_add || props.can_overwrite)}
