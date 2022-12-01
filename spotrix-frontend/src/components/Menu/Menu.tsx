@@ -342,11 +342,6 @@ export function Menu({
             />
           </li>
           <li>
-            <Icons.NavLab
-              onClick={() => window.open('/spotrix/sqllab/', '_self')}
-            />
-          </li>
-          <li>
             <Icons.NavExplore
               onClick={() => window.open('/spotrix/explore/', '_self')}
             />
