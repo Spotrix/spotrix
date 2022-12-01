@@ -37,7 +37,7 @@ A modern, enterprise-ready business intelligence web application.
 
 ## Quickstart
 
-First, Install & run your spotrix server with python3 env:
+Firstly, Install & run your spotrix server with python3 env:
 ```shell
 pip install spotrix
 spotrix init
@@ -110,6 +110,7 @@ Here are some of the major database solutions that are supported:
   <img src="./spotrix-frontend/images/greenplum.png" alt="greenplum" border="0" width="140" height="45" />
   <img src="./spotrix-frontend/images/clickhouse.png" alt="clickhouse" border="0" width="140" height="37" />
   <img src="./spotrix-frontend/images/exasol.png" alt="exasol" border="0" width="106" height="59" />
+  <img src="./spotrix-frontend/images/minds.svg" alt="minds" border="0" width="62" height="62" />
   <img src="./spotrix-frontend/images/guinsoo.png" alt="guinsoo" border="0" width="62" height="46" />
   <img src="./spotrix-frontend/images/monet-db.png" alt="monet-db" border="0" width="106" height="46" />
   <img src="./spotrix-frontend/images/apache-kylin.png" alt="apache-kylin" border="0" width="56" height="64" />
