@@ -20,22 +20,39 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# import sqlalchemy
-# from sqlalchemy import Table, Column, String, MetaData
-#
-# engine = sqlalchemy.create_engine('postgres://admin:123456@localhost:5432/spotrix')
-#
-# with engine.connect() as connection:
-#     metadata = MetaData()
-#     tables = Table('tables', metadata,
-#     Column('table_schema', String),
-#     Column('table_name', String),
-#     schema = 'information_schema')
-#     results = connection.execute(tables.select().where(tables.c.table_schema=='pg_catalog'))
-#     for result in results:
-#         print(result)
+import sqlalchemy
+from sqlalchemy import Table, Column, String, MetaData
 
-import duckdb
+engine = sqlalchemy.create_engine('postgresql://sa:sa@localhost:5435/xxx')
 
-cursor = duckdb.connect()
-print(cursor.execute('SELECT 42').fetchall())
+with engine.connect() as connection:
+    metadata = MetaData()
+    tables = Table('tables', metadata,
+                   Column('table_schema', String),
+                   Column('table_name', String),
+                   schema='information_schema')
+    results = connection.execute(
+        tables.select().where(tables.c.table_schema == 'pg_catalog'))
+    for result in results:
+        print(result)
+
+# Create
+engine.execute("CREATE TABLE IF NOT EXISTS films (title text, director text, year_yy text)")
+engine.execute("INSERT INTO films (title, director, year_yy) VALUES ('Doctor Strange', 'Scott Derrickson', '2016')")
+
+# Read
+result_set = engine.execute("SELECT * FROM films")
+for r in result_set:
+    print(r)
+
+# Update
+engine.execute("UPDATE films SET title='Some2016Film' WHERE year_yy='2016'")
+
+# Delete
+engine.execute("DELETE FROM films WHERE year_yy='2016'")
+
+
+# import duckdb
+#
+# cursor = duckdb.connect()
+# print(cursor.execute('SELECT 42').fetchall())
