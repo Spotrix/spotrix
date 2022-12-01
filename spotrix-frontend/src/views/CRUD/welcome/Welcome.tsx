@@ -108,6 +108,12 @@ const WelcomeContainer = styled.div`
       height: 168px;
     }
   }
+  .ant-collapse
+    > .ant-collapse-item
+    > .ant-collapse-header
+    .ant-collapse-arrow {
+    color: transparent;
+  }
 `;
 
 const WelcomeNav = styled.div`
