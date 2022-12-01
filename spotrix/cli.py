@@ -17,6 +17,7 @@
 # under the License.
 import json
 import logging
+import os
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -86,8 +87,20 @@ def spotrix() -> None:
 @with_appcontext
 def init() -> None:
     """Inits the Spotrix application"""
+    default_fab_cmd = """spotrix fab create-admin \
+              --username admin \
+              --firstname Spotrix \
+              --lastname Admin \
+              --email spotrix.guinsoolab@gmail.com \
+              --password admin"""
+    os.system(default_fab_cmd)
+    default_db_upgrade = "spotrix db upgrade"
+    os.system(default_db_upgrade)
+    # Sync permissions
     appbuilder.add_permissions(update_perms=True)
     security_manager.sync_role_definitions()
+    # Load examples
+    load_examples()
 
 
 @spotrix.command()
@@ -115,6 +128,7 @@ def version(verbose: bool) -> None:
     if verbose:
         print("[DB] : " + "{}".format(db.engine))
     print(Style.RESET_ALL)
+
 
 def load_examples_run(
     load_test_data: bool = False,
