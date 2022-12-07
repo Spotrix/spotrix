@@ -40,7 +40,14 @@ export default function RecentActivity({ user }: RecentActivityProps) {
       }));
   };
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        maxHeight: '80vh',
+        overflowY: 'scroll',
+      }}
+    >
       <TableLoader
         className="table-condensed"
         mutator={mutator}

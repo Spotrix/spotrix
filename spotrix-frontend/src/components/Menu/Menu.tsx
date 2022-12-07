@@ -17,7 +17,7 @@
  * under the License.
  */
 import React, { useState, useEffect } from 'react';
-import { styled, css } from '@superset-ui/core';
+import { styled, css, t } from '@superset-ui/core';
 import { debounce } from 'lodash';
 import { Global } from '@emotion/react';
 import { getUrlParam } from 'src/utils/urlUtils';
@@ -26,9 +26,13 @@ import { Link } from 'react-router-dom';
 import { Grid } from 'antd';
 import Icons from 'src/components/Icons';
 import { URL_PARAMS } from 'src/constants';
-import Avatar from 'antd/lib/avatar/avatar';
 // import RightMenu from './MenuRight';
+import Gravatar from 'react-gravatar';
 import { Languages } from './LanguagePicker';
+
+const container = document.getElementById('app');
+const bootstrapJson = container?.getAttribute('data-bootstrap') ?? '{}';
+const bootstrap = JSON.parse(bootstrapJson);
 
 interface BrandProps {
   path: string;
@@ -326,32 +330,33 @@ export function Menu({
           <img width={brand.width} src={brand.icon} alt={brand.alt} />
         </a>
         <ul>
-          <li>
+          <li key="welcome">
             <Icons.NavHome
               onClick={() => window.open('/spotrix/welcome/', '_self')}
             />
           </li>
-          <li>
+          <li key="dashboard-list">
             <Icons.NavDashboard
               onClick={() => window.open('/dashboard/list/', '_self')}
             />
           </li>
-          <li>
+          <li key="chart-list">
             <Icons.NavCharts
               onClick={() => window.open('/chart/list/', '_self')}
             />
           </li>
-          <li>
+          <li key="data-explore">
             <Icons.NavExplore
               onClick={() => window.open('/spotrix/explore/', '_self')}
             />
           </li>
-          <li>
+          <li key="view-list">
             <Icons.NavData
               onClick={() => window.open('/databaseview/list/', '_self')}
             />
           </li>
           <li
+            key="gitbook"
             style={{
               position: 'absolute',
               bottom: '50px',
@@ -367,6 +372,7 @@ export function Menu({
             />
           </li>
           <li
+            key="logout"
             style={{
               position: 'absolute',
               bottom: 0,
@@ -380,10 +386,17 @@ export function Menu({
         </ul>
       </div>
       <div className="userAvatar">
-        <Avatar
-          shape="circle"
-          src="https://avatars.githubusercontent.com/u/57523094?s=96&v=4"
-        />
+        <a href="https://en.gravatar.com/">
+          <Gravatar
+            email={bootstrap.user.email}
+            width="100%"
+            height=""
+            size={220}
+            alt={t('Profile picture provided by Gravatar')}
+            className="img-rounded"
+            style={{ borderRadius: '50%' }}
+          />
+        </a>
       </div>
     </StyledHeader>
   );

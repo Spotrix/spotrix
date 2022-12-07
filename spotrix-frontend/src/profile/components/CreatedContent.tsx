@@ -69,7 +69,14 @@ class CreatedContent extends React.PureComponent<CreatedContentProps> {
 
   render() {
     return (
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          maxHeight: '80vh',
+          overflowY: 'scroll',
+        }}
+      >
         <h3>{t('Dashboards')}</h3>
         {this.renderDashboardTable()}
         <hr />
