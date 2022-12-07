@@ -29,7 +29,14 @@ interface SecurityProps {
 
 export default function Security({ user }: SecurityProps) {
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        maxHeight: '80vh',
+        overflowY: 'scroll',
+      }}
+    >
       <div className="roles">
         <h4>
           {t('Roles')} <Badge count={Object.keys(user.roles).length} showZero />
