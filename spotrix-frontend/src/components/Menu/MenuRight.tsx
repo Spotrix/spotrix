@@ -21,8 +21,13 @@ import { MainNav as Menu } from 'src/common/components';
 import { t, styled, css, SupersetTheme } from '@superset-ui/core';
 import { Link } from 'react-router-dom';
 import Icons from 'src/components/Icons';
+// import Gravatar from 'react-gravatar';
 import LanguagePicker from './LanguagePicker';
 import { NavBarProps, MenuObjectProps } from './Menu';
+
+// const container = document.getElementById('app');
+// const bootstrapJson = container?.getAttribute('data-bootstrap') ?? '{}';
+// const bootstrap = JSON.parse(bootstrapJson);
 
 export const dropdownItems = [
   {
@@ -49,9 +54,6 @@ const versionInfoStyles = (theme: SupersetTheme) => css`
   font-size: ${theme.typography.sizes.xs}px;
   white-space: nowrap;
 `;
-const StyledI = styled.div`
-  color: ${({ theme }) => theme.colors.primary.dark1};
-`;
 
 const StyledDiv = styled.div<{ align: string }>`
   display: flex;
@@ -60,7 +62,7 @@ const StyledDiv = styled.div<{ align: string }>`
   align-items: center;
   margin-right: ${({ theme }) => theme.gridUnit}px;
   .ant-menu-submenu-title > svg {
-    top: ${({ theme }) => theme.gridUnit * 5.25}px;
+    // top: ${({ theme }) => theme.gridUnit * 5.25}px;
   }
 `;
 
@@ -86,28 +88,11 @@ const RightMenu = ({
 }: RightMenuProps) => (
   <StyledDiv align={align}>
     <Menu mode="horizontal">
-      {!navbarRight.user_is_anonymous && (
-        <SubMenu
-          data-test="new-dropdown"
-          title={
-            <StyledI data-test="new-dropdown-icon" className="fa fa-plus" />
-          }
-          icon={<Icons.TriangleDown />}
-        >
-          {dropdownItems.map(menu => (
-            <Menu.Item key={menu.label}>
-              <a href={menu.url}>
-                <i
-                  data-test={`menu-item-${menu.label}`}
-                  className={`fa ${menu.icon}`}
-                />{' '}
-                {menu.label}
-              </a>
-            </Menu.Item>
-          ))}
-        </SubMenu>
-      )}
-      <SubMenu title="Settings" icon={<Icons.TriangleDown iconSize="xl" />}>
+      <SubMenu
+        title="&nbsp;"
+        icon={<Icons.TriangleDown iconSize="xl" />}
+        style={{ borderBottomWidth: 0 }}
+      >
         {settings.map((section, index) => [
           <Menu.ItemGroup key={`${section.label}`} title={section.label}>
             {section.childs?.map(child => {
@@ -153,23 +138,11 @@ const RightMenu = ({
           <Menu.ItemGroup key="about-section" title={t('About')}>
             <div className="about-section">
               {navbarRight.show_watermark && (
-                <div css={versionInfoStyles}>
-                  {t('Powered by Spotrix')}
-                </div>
+                <div css={versionInfoStyles}>{t('Powered by Spotrix')}</div>
               )}
               {navbarRight.version_string && (
                 <div css={versionInfoStyles}>
                   Version: {navbarRight.version_string}
-                </div>
-              )}
-              {navbarRight.version_sha && (
-                <div css={versionInfoStyles}>
-                  SHA: {navbarRight.version_sha}
-                </div>
-              )}
-              {navbarRight.build_number && (
-                <div css={versionInfoStyles}>
-                  Build: {navbarRight.build_number}
                 </div>
               )}
             </div>
