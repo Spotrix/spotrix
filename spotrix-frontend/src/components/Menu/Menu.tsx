@@ -26,8 +26,8 @@ import { Link } from 'react-router-dom';
 import { Grid } from 'antd';
 import Icons from 'src/components/Icons';
 import { URL_PARAMS } from 'src/constants';
-// import RightMenu from './MenuRight';
 import Gravatar from 'react-gravatar';
+import RightMenu from './MenuRight';
 import { Languages } from './LanguagePicker';
 
 const container = document.getElementById('app');
@@ -88,10 +88,10 @@ const StyledHeader = styled.header`
   background-color: white;
   // margin-bottom: 2px;
   margin-left: 60px;
-  margin-top: 47px;
+  // margin-top: 47px;
   // border-top: 1px solid #dbdcdd;
   &:nth-last-of-type(2) nav {
-    margin-bottom: 2px;
+    // margin-bottom: 2px;
   }
 
   .caret {
@@ -156,19 +156,6 @@ const StyledHeader = styled.header`
       &:hover {
         color: ${({ theme }) => theme.colors.primary.base} !important;
         background-color: transparent !important;
-      }
-    }
-  }
-
-  .ant-menu-item a {
-    &:hover {
-      color: ${({ theme }) => theme.colors.grayscale.dark1};
-      background-color: ${({ theme }) => theme.colors.primary.light5};
-      border-bottom: none;
-      margin: 0;
-      &:after {
-        opacity: 1;
-        width: 100%;
       }
     }
   }
@@ -314,6 +301,12 @@ export function Menu({
       {/*  /> */}
       {/* </Col> */}
       {/* </Row> */}
+      <RightMenu
+        align={screens.md ? 'flex-end' : 'flex-start'}
+        settings={settings}
+        navbarRight={navbarRight}
+        isFrontendRoute={isFrontendRoute}
+      />
       <div className="appLeftBarNavs">
         <a
           href={brand.path}
@@ -359,7 +352,7 @@ export function Menu({
             key="gitbook"
             style={{
               position: 'absolute',
-              bottom: '50px',
+              bottom: 0,
               left: 0,
               width: '60px',
               justifyContent: 'center',
@@ -370,18 +363,6 @@ export function Menu({
                 window.open('https://ciusji.gitbook.io/spotrix/', '_blank')
               }
             />
-          </li>
-          <li
-            key="logout"
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              width: '60px',
-              justifyContent: 'center',
-            }}
-          >
-            <Icons.Full onClick={() => window.open('/logout', '_self')} />
           </li>
         </ul>
       </div>
