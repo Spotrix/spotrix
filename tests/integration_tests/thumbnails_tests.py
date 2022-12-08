@@ -73,7 +73,7 @@ class TestWebDriverProxy(SupersetTestCase):
         user = security_manager.get_user_by_username(
             app.config["THUMBNAIL_SELENIUM_USER"]
         )
-        url = get_url_path("Superset.slice", slice_id=1, standalone="true")
+        url = get_url_path("Spotrix.slice", slice_id=1, standalone="true")
         app.config["SCREENSHOT_SELENIUM_HEADSTART"] = 5
         webdriver.get_screenshot(url, "chart-container", user=user)
         assert mock_sleep.call_args_list[0] == call(5)
@@ -86,7 +86,7 @@ class TestWebDriverProxy(SupersetTestCase):
         user = security_manager.get_user_by_username(
             app.config["THUMBNAIL_SELENIUM_USER"]
         )
-        url = get_url_path("Superset.slice", slice_id=1, standalone="true")
+        url = get_url_path("Spotrix.slice", slice_id=1, standalone="true")
         webdriver.get_screenshot(url, "chart-container", user=user)
         assert mock_webdriver_wait.call_args_list[0] == call(ANY, 15)
 
@@ -98,7 +98,7 @@ class TestWebDriverProxy(SupersetTestCase):
         user = security_manager.get_user_by_username(
             app.config["THUMBNAIL_SELENIUM_USER"]
         )
-        url = get_url_path("Superset.slice", slice_id=1, standalone="true")
+        url = get_url_path("Spotrix.slice", slice_id=1, standalone="true")
         webdriver.get_screenshot(url, "chart-container", user=user)
         assert mock_webdriver_wait.call_args_list[1] == call(ANY, 15)
 
@@ -112,7 +112,7 @@ class TestWebDriverProxy(SupersetTestCase):
         user = security_manager.get_user_by_username(
             app.config["THUMBNAIL_SELENIUM_USER"]
         )
-        url = get_url_path("Superset.slice", slice_id=1, standalone="true")
+        url = get_url_path("Spotrix.slice", slice_id=1, standalone="true")
         app.config["SCREENSHOT_SELENIUM_ANIMATION_WAIT"] = 4
         webdriver.get_screenshot(url, "chart-container", user=user)
         assert mock_sleep.call_args_list[1] == call(4)

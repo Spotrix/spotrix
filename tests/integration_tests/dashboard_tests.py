@@ -129,7 +129,7 @@ class TestDashboard(SupersetTestCase):
             assert escape(title) in self.client.get(url).data.decode("utf-8")
 
     def test_superset_dashboard_url(self):
-        url_for("Superset.dashboard", dashboard_id_or_slug=1)
+        url_for("Spotrix.dashboard", dashboard_id_or_slug=1)
 
     def test_new_dashboard(self):
         self.login(username="admin")
