@@ -296,7 +296,7 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
         return {}
 
     def update_thumbnail(self) -> None:
-        url = get_url_path("Superset.dashboard", dashboard_id_or_slug=self.id)
+        url = get_url_path("Spotrix.dashboard", dashboard_id_or_slug=self.id)
         cache_dashboard_thumbnail.delay(url, self.digest, force=True)
 
     @debounce(0.1)

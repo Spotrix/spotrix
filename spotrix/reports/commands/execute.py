@@ -151,13 +151,13 @@ class BaseReportState:
                     type=ChartDataResultType.POST_PROCESSED.value,
                 )
             return get_url_path(
-                "Superset.slice",
+                "Spotrix.slice",
                 user_friendly=user_friendly,
                 slice_id=self._report_schedule.chart_id,
                 **kwargs,
             )
         return get_url_path(
-            "Superset.dashboard",
+            "Spotrix.dashboard",
             user_friendly=user_friendly,
             dashboard_id_or_slug=self._report_schedule.dashboard_id,
             **kwargs,

@@ -216,7 +216,7 @@ class DashboardRestApi(BaseSpotrixModelRestApi):
 
     def __repr__(self) -> str:
         """Deterministic string representation of the API instance for etag_cache."""
-        return "Superset.dashboards.api.DashboardRestApi@v{}{}".format(
+        return "Spotrix.dashboards.api.DashboardRestApi@v{}{}".format(
             self.appbuilder.app.config["VERSION_STRING"],
             self.appbuilder.app.config["VERSION_SHA"],
         )
@@ -808,7 +808,7 @@ class DashboardRestApi(BaseSpotrixModelRestApi):
             return self.response_404()
 
         dashboard_url = get_url_path(
-            "Superset.dashboard", dashboard_id_or_slug=dashboard.id
+            "Spotrix.dashboard", dashboard_id_or_slug=dashboard.id
         )
         # If force, request a screenshot from the workers
         if kwargs["rison"].get("force", False):

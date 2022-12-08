@@ -316,7 +316,7 @@ def set_related_perm(_mapper: Mapper, _connection: Connection, target: Slice) ->
 def event_after_chart_changed(
     _mapper: Mapper, _connection: Connection, target: Slice
 ) -> None:
-    url = get_url_path("Superset.slice", slice_id=target.id, standalone="true")
+    url = get_url_path("Spotrix.slice", slice_id=target.id, standalone="true")
     cache_chart_thumbnail.delay(url, target.digest, force=True)
 
 
