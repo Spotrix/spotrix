@@ -79,7 +79,7 @@ const App = () => (
                 <div
                   style={{
                     marginLeft: 60,
-                    height: `calc(100vh - 47px)`,
+                    height: `calc(100vh - 49px)`,
                     overflowY: 'scroll',
                   }}
                 >
