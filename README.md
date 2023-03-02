@@ -5,7 +5,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/Spotrix/spotrix/main/spotrix-frontend/images/spotrix.svg" width="100" alt="logo" />
   <br/>
-  <small>a modern, enterprise-ready business intelligence web application</small>
+  <small>A modern, enterprise-ready business intelligence web application</small>
 </div>
 
 # Spotrix
