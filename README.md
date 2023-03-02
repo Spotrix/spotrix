@@ -3,12 +3,12 @@
     <br />
 </div>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Spotrix/spotrix/main/spotrix-frontend/images/spotrix.svg" width="120" alt="logo" />
+  <img src="https://raw.githubusercontent.com/Spotrix/spotrix/main/spotrix-frontend/images/spotrix.svg" width="100" alt="logo" />
   <br/>
   <small>a modern, enterprise-ready business intelligence web application</small>
 </div>
 
-# [Spotrix](https://ciusji.gitbook.io/spotrix/)
+# Spotrix
 
 ![](https://img.shields.io/github/repo-size/Spotrix/spotrix)
 ![](https://img.shields.io/github/license/Spotrix/spotrix)
@@ -65,8 +65,6 @@ Spotrix provides:
 - The ability to add custom visualization plugins
 - An API for programmatic customization
 - A cloud-native architecture designed from the ground up for scale
-
-![spotrix-ecosystem](https://raw.githubusercontent.com/Spotrix/spotrix/main/spotrix-frontend/images/persona-decision-enablers-full-width.png)
 
 Spotrix is cloud-native and designed to be highly available. It was designed to scale out to large, distributed 
 environment and works very well inside containers. While you can easily test drive Spotrix on a modest setup or simple 
