@@ -18,8 +18,8 @@
 [Installation](https://ciusji.gitbook.io/spotrix/installing/installing-from-source) | 
 [Configuration](https://ciusji.gitbook.io/spotrix/congiguration/basic-configuration) | 
 [Creating Charts](https://ciusji.gitbook.io/spotrix/creating-charts/creating-your-charts) | 
-[APIs](https://ciusji.gitbook.io/spotrix/appendix/api) | 
-[FAQ](https://ciusji.gitbook.io/spotrix/appendix/faq)
+[Data Architecture](https://ciusji.gitbook.io/spotrix/ecosystem/data-architecture) | 
+[FAQs](https://ciusji.gitbook.io/spotrix/appendix/faqs)
 
 A modern, enterprise-ready business intelligence web application.
 
