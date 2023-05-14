@@ -89,7 +89,7 @@ const Styles = styled.div`
   flex-basis: 100vh;
   align-items: stretch;
   margin-left: 60px;
-  border-top: 1px solid ${({ theme }) => theme.colors.grayscale.light2};
+  // border-top: 1px solid ${({ theme }) => theme.colors.grayscale.light2};
   .explore-column {
     display: flex;
     flex-direction: column;
