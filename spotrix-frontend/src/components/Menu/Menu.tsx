@@ -23,6 +23,14 @@ import { Global } from '@emotion/react';
 import { getUrlParam } from 'src/utils/urlUtils';
 import { MainNav as DropdownMenu, MenuMode } from 'src/common/components';
 import { Link } from 'react-router-dom';
+import {
+  RiBarChart2Fill,
+  RiBook2Fill,
+  RiBubbleChartFill,
+  RiDatabase2Fill,
+  RiLayoutGridFill,
+  RiPieChartBoxLine,
+} from 'react-icons/ri';
 import { Grid } from 'antd';
 import Icons from 'src/components/Icons';
 import { URL_PARAMS } from 'src/constants';
@@ -89,11 +97,10 @@ const StyledHeader = styled.header`
   // margin-bottom: 2px;
   margin-left: 60px;
   // margin-top: 47px;
-  // border-top: 1px solid #dbdcdd;
+  border-bottom: 1px solid #dbdcdd;
   &:nth-last-of-type(2) nav {
     // margin-bottom: 2px;
   }
-
   .caret {
     display: none;
   }
@@ -324,27 +331,32 @@ export function Menu({
         </a>
         <ul>
           <li key="welcome">
-            <Icons.NavHome
+            <RiLayoutGridFill
+              size={20}
               onClick={() => window.open('/spotrix/welcome/', '_self')}
             />
           </li>
           <li key="dashboard-list">
-            <Icons.NavDashboard
+            <RiPieChartBoxLine
+              size={20}
               onClick={() => window.open('/dashboard/list/', '_self')}
             />
           </li>
           <li key="chart-list">
-            <Icons.NavCharts
+            <RiBarChart2Fill
+              size={20}
               onClick={() => window.open('/chart/list/', '_self')}
             />
           </li>
           <li key="data-explore">
-            <Icons.NavExplore
+            <RiBubbleChartFill
+              size={20}
               onClick={() => window.open('/spotrix/explore/', '_self')}
             />
           </li>
           <li key="view-list">
-            <Icons.NavData
+            <RiDatabase2Fill
+              size={20}
               onClick={() => window.open('/databaseview/list/', '_self')}
             />
           </li>
@@ -358,7 +370,8 @@ export function Menu({
               justifyContent: 'center',
             }}
           >
-            <Icons.Map
+            <RiBook2Fill
+              size={20}
               onClick={() =>
                 window.open('https://ciusji.gitbook.io/spotrix/', '_blank')
               }
