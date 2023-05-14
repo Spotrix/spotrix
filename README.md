@@ -15,7 +15,7 @@
 ![](https://img.shields.io/github/v/tag/Spotrix/spotrix)
 
 [Introduction](https://ciusji.gitbook.io/spotrix/) | 
-[Installation](https://ciusji.gitbook.io/spotrix/installing/installing-from-source) | 
+[Installation](https://ciusji.gitbook.io/spotrix/installing/installing) | 
 [Configuration](https://ciusji.gitbook.io/spotrix/congiguration/basic-configuration) | 
 [Creating Charts](https://ciusji.gitbook.io/spotrix/creating-charts/creating-your-charts) | 
 [Data Architecture](https://ciusji.gitbook.io/spotrix/ecosystem/data-architecture) | 
